@@ -124,8 +124,9 @@ jobs:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         # 默认当前仓库
         # TARGET_REPO: username/repo
-        # 默认 gh-pages, 这个不是根据哪个分支什么, 而是是要生成的
+        # 默认 gh-pages
         # TARGET_BRANCH: master
         BUILD_SCRIPT: npm install && npm run docs:build
         BUILD_DIR: ./.vuepress/dist/
 ```
+`TARGET_BRANCH`: 这个不是根据哪个分支什么, 而是是要生成的. 所以你会看到自己多了一个gh-pages分支
