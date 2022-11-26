@@ -22,7 +22,7 @@ jobs:
         node-version: 16
     
     - name: vuepress
-      runs: |
+      run: |
         npm install 
         npm run vuepress:build
 
