@@ -106,6 +106,8 @@ $ cd .github/workflows
 ```
 创建token
 点击你的头像 > Settings > Developer settings > Personal access tokens > Generate new token (classic). 权限至少要勾选repo, workflow
+
+在仓库Settings> Secrets> Actions> New repository secret> 命名变量`ACCESS_TOKEN`, 填上生成token的值
 ```yaml
 name: Build and Deploy
 on: [push]
