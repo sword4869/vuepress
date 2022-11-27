@@ -1,5 +1,7 @@
 # Hello VuePress
 
+## directory structure
+
 区别于官方推荐的结构: 我们的文档直接放在外面, 并不放在`docs`里面
 ```bash
 .
@@ -19,8 +21,7 @@
 └── package-lock.json
 ```
 
-vuepress init
-
+## vuepress init(npm version)
 ```bash
 $ cd project
 
@@ -31,8 +32,8 @@ $ npm install -D vuepress
 
 $ vim package.json
 "scripts": {
-    "docs:dev": "vuepress dev",
-    "docs:build": "vuepress build"
+    "vuepress:dev": "vuepress dev",
+    "vuepress:build": "vuepress build"
 },
 
 $ mkdir .vuepress
@@ -52,6 +53,38 @@ $ npm run docs:dev
 
 VuePress 会在 <http://localhost:8080> (opens new window)启动一个热重载的开发服务器。
 
+## vuepress init(yarn version)
+
+因为npm会出错（比如win上失败了），而yarn则成功了
+
+```bash
+$ cd project
+
+$ yarn init
+
+# 将 VuePress 安装为本地依赖
+$ yarn add vuepress -dev
+
+$ vim package.json
+"scripts": {
+    "vuepress:dev": "vuepress dev",
+    "vuepress:build": "vuepress build"
+},
+
+$ mkdir .vuepress
+
+$ cd .vuepress
+
+.vuepress$ vim config.js
+module.exports = {
+    title: 'Hello VuePress',
+    description: 'Just playing around',
+}
+
+.vuepress$ cd ..
+
+$ yarn vuepress:dev
+```
 # GitPages
 
 如果懒的话, 不用vuepress, gitpages也可以直接显示md文档

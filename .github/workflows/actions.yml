@@ -21,12 +21,17 @@ jobs:
       with:
         node-version: 16
     
-    - name: vuepress
+    - name: vuepress build
       run: |
-        npm install 
-        npm run vuepress:build
+        npm install -g yarn
+        yarn
+        yarn vuepress:build
 
-    - name: Deploy
+    - name: copy image
+      run: |
+        cp -r image .vuepress/dist
+
+    - name: gitpush
       # 将构建产物 commit 到一个分支上，用于发布静态站点资源
       # https://github.com/peaceiris/actions-gh-pages
       uses: peaceiris/actions-gh-pages@v3

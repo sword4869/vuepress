@@ -6,6 +6,8 @@ set -e
 # 生成静态文件
 npm run vuepress:build
 
+cp -r image ./.vuepress/dist
+
 # 进入生成的文件夹
 cd ./.vuepress/dist
 
