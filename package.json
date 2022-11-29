@@ -12,5 +12,5 @@
   "devDependencies": {
     "vuepress": "^1.9.7"
   },
-  "repository": "git@github.com:sword4869/vuepress.git"
+  "repository": "git@github.com:sword4869/vuepress-starter.git"
 }
