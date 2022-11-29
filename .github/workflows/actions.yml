@@ -16,7 +16,7 @@ jobs:
         restore-keys: |
           ${{ runner.os }}-node-
     
-    - name: Use Node.js
+    - name: Setup Node.js
       uses: actions/setup-node@v1
       with:
         node-version: 16
