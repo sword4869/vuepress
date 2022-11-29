@@ -104,7 +104,7 @@ Publishing from a branch: 手动提交到gh-pages
 Publishing with a custom GitHub Actions workflow: 提交到主分支时就会自动更新
 ## Publishing from a branch
 
-![failure](./_images/83ad32c958dacc26e343fa0988ac1868f25889fb9f830f60f9946bf11d77dca4.png)
+![failure](./images/83ad32c958dacc26e343fa0988ac1868f25889fb9f830f60f9946bf11d77dca4.png)
 
 - 自动Publish的分支是`gh-pages`, 其他命名的分支你还得手动去在setting里选.
 - 还可以选择`/`或者`/docs`为source(这估计就是为什么vuepresss推荐的官方格式)
