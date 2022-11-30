@@ -16,14 +16,13 @@ jobs:
     #   with:
     #     node-version: 14
     
-    # - name: vuepress build
-    #   run: |
-    #     yarn install
-    #     yarn vuepress:build
+    - name: vuepress build
+      run: |
+        yarn install
+        yarn vuepress:build
 
-    # - name: copy images
-    #   run: |
-    #     cp -r images docs/.vuepress/dist
+    - name: copy images
+      run: cp -r images docs/.vuepress/dist
 
     - name: gitpush
       # 将构建产物 commit 到一个分支上，用于发布静态站点资源
@@ -36,5 +35,4 @@ jobs:
         publish_dir: docs/.vuepress/dist/
         # 默认发布到 gh-pages 分支上，可以指定特定的发布分支（不能选拉取代码的分支）
         publish_branch: gh-pages
-        BUILD_SCRIPT: yarn install && yarn vuepress:build && cp -r images docs/.vuepress/dist
         full_commit_message: ${{ github.event.head_commit.message }}
