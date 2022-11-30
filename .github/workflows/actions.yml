@@ -19,6 +19,7 @@ jobs:
         BUILD_SCRIPT: yarn install && yarn vuepress:build
         BUILD_DIR: docs/.vuepress/dist/
     
+    # -----------------------------想不通为什么下面的失败了, /node_modules/mini-css-extract-plugin/dist/loader.js----------------------------------------
     # - name: Setup Node.js
     #   uses: actions/setup-node@v1
     #   with:
