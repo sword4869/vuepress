@@ -18,9 +18,6 @@ jobs:
     
     - name: vuepress build
       run: |
-        apt update
-        apt install nodejs
-        apt install npm
         npm install -g yarn
         yarn install
         yarn vuepress:build
