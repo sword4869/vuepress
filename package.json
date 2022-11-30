@@ -10,6 +10,8 @@
   "author": "sword4869 <1084662708@qq.com>",
   "license": "ISC",
   "devDependencies": {
+    "node-sass": "^6.0.1",
+    "sass-loader": "^10.0.1",
     "vuepress": "^1.9.7"
   },
   "repository": "git@github.com:sword4869/vuepress-starter.git"
