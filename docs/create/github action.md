@@ -15,6 +15,6 @@ $ cd .github/workflows
 在仓库Settings> Secrets> Actions> New repository secret> 命名变量`ACCESS_TOKEN`, 填上生成token的值
 
 
-[actions.yml](.github/workflows/actions.yml)
+[actions.yml](../../.github/workflows/actions.yml)
 
 `TARGET_BRANCH`: 这个不是根据哪个分支什么, 而是是要生成的. 所以你会看到自己多了一个gh-pages分支

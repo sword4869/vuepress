@@ -11,6 +11,12 @@ jobs:
     - name: Checkout
       uses: actions/checkout@v2
 
+    - name: Copy images
+      run: |
+        mkdir -p docs/.vuepress/public/images
+        rm -r docs/.vuepress/public/images
+        cp -r images/ docs/.vuepress/public/images
+
     - name: vuepress-deploy
       uses: jenkey2011/vuepress-deploy@master
       env:

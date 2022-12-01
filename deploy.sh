@@ -5,16 +5,16 @@ set -e
 
 yarn install 
 
+mkdir -p docs/.vuepress/public/images
+rm -r docs/.vuepress/public/images
+cp -r images/ docs/.vuepress/public/images
+
 # 生成静态文件
 yarn vuepress:build
-
-cp -r images docs/.vuepress/dist
 
 # 进入生成的文件夹
 cd docs/.vuepress/dist
 
-# 如果是发布到自定义域名
-# echo 'www.example.com' > CNAME
 
 git init
 git add -A
