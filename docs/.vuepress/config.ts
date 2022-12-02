@@ -19,23 +19,19 @@ export default defineConfig({
     editLinkText: 'Help us improve this page!',
 
 
-    sidebar: [
-      'ff',
-      {
-        title: 'create',
-        children: [
-          ['/create/空项目.md','空项目.md'],
-          ['/create/deploy脚本.md','deploy脚本.md'],
-          ['/create/github action.md','github action.md'],
-          ['/create/图片格式.md','图片格式.md'],
-        ],
-      },
-      {
-        title: 'theme',
-        children: [
-          ['theme.md','theme.md'],
-        ]
-      }
-    ]
+    sidebar: {
+      '/': [
+        {
+          title: 'create',
+          children: [
+            ['/create/空项目.md', '空项目.md'],
+            ['/create/deploy脚本.md', 'deploy脚本.md'],
+            ['/create/github action.md', 'github action.md'],
+            ['/create/图片格式.md', '图片格式.md'],
+          ],
+        },
+        ['theme.md','theme2.md'],
+      ]
+    },
   }
 });

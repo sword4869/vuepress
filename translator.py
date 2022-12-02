@@ -68,26 +68,30 @@ a = [
 #         children: [
 #           ['theme.md','theme.md'],
 #         ]
-#       }
+#       },
 #     ]
 #   }
 # ]
 result = []
 
-for name in a[0][1]:
-    if os.path.isdir(os.path.join(root, name)):
-        result.append({
-            'title': name,
-            'children': []
-        })
-    else:
-        result.append(name)
 
-def getDD(path):
-    root, dirs, files = a[0]
-    for dir in dirs:
-        result.append({
-            'title': name,
-            'children': []
-        })
-    result += files
+def getDD(i, prefix):
+    if i > len(a):
+        return
+        
+    root, dirs, files = a[i]
+    
+    if len(dirs) > 0:
+        for dir in dirs:
+            result.append({
+                'title': dir,
+                'children': []
+            })
+
+    if len(files) > 0:
+        for file in files:
+            result.append([prefix + file, file])
+
+    getDD(i+1, prefix)
+    
+getDD(a, 0, '/')
