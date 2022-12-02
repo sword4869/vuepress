@@ -69,21 +69,20 @@ on:
   push:
     branches:
       - main
-jobs:
-  build-and-deploy:
-    runs-on: ubuntu-22.04
-    steps:
-    
-    - name: Checkout
-      uses: actions/checkout@v2
 
-    - name: vuepress-deploy
-      uses: jenkey2011/vuepress-deploy@master
-      env:
-        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        TARGET_BRANCH: gh-pages
-        BUILD_SCRIPT: yarn install && yarn vuepress:build
-        BUILD_DIR: docs/.vuepress/dist/
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      
+      - name: vuepress-deploy
+        uses: jenkey2011/vuepress-deploy@master
+        env:
+          ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TARGET_BRANCH: gh-pages
+          BUILD_SCRIPT: yarn install && yarn vuepress:build
+          BUILD_DIR: docs/.vuepress/dist/
 ```
 再去仓库设置中激活gitpages.
 ## .gitignore
