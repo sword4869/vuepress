@@ -16,7 +16,7 @@ jobs:
           cache: 'yarn'
       - run: |
           yarn install
-          ls -a
+          ls node_modules
       - run: yarn vuepress:build
 
       # # 缓存 node_modules
