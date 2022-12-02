@@ -14,10 +14,7 @@ jobs:
         with:
           node-version: '16.x'
           cache: 'yarn'
-      - run: |
-          yarn install
-
-      
+      # - run: yarn install
 
       - name: vuepress-deploy
         uses: jenkey2011/vuepress-deploy@master
