@@ -28,9 +28,9 @@ project
 ## B
 
 ```bash
-mkdir -p docs/.vuepress/public/images
-rm -r docs/.vuepress/public/images
-cp -r images/ docs/.vuepress/public/images
+mkdir -p docs/.vuepress/public/vuepress-starter/images
+rm -r docs/.vuepress/public/vuepress-starter/images
+cp -r images/ docs/.vuepress/public/vuepress-starter/images
 ```
 ```bash
 project
@@ -56,4 +56,6 @@ project
 <img src="/images/3187ee42998b26ccb76cf1237b1e5714686b3f425ca50a2e34b4c34ce93dc7f6.png" alt="image">
 ```
 
-但是用deploy.sh脚本部署的时候出现了`base`前缀的问题。图片https的地址是带前缀的，但是html索引过去的地址是不带前缀的。
+但是部署到gitpage的时候出现了`base`前缀的问题。图片https的地址是带前缀的，但是html中src却是不带前缀的。
+
+所以, 还得用`withbase`, 一个个修改markdown, 那还是算了.
