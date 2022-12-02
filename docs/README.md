@@ -1,8 +1,77 @@
-create: 
-- [README](/create/README.md)
+```bash
+yarn init
+yarn add -D vuepress
+mkdir docs
+mkdir -p .github/workflows
+touch .github/workflows/ci.yml
 
-- [空项目](/create/空项目.md)
+mkdir -p docs/.vuepress
+touch docs/.vuepress/config.ts
 
-- [github action](/create/github%20action.md)
+touch .gitignore
+```
 
-- [deploy脚本](/create/deploy脚本.md)
+`docs/.vuepress/config.ts`
+```ts
+import { defineConfig } from "vuepress/config";
+
+export default defineConfig({
+  title: 'Hello VuePress',
+  base: '/vuepress-starter/',
+  themeConfig: {
+    docsRepo: "sword4869/vuepress-starter",
+    docsBranch: "main",
+    docsDir: 'docs',
+    editLinks: true,
+    editLinkText: 'Help us improve this page!',
+
+    sidebar: [
+      {
+        title: 'create',
+        children: [
+          ['/create/空项目.md','空项目.md'],
+          ['/create/deploy脚本.md','deploy脚本.md'],
+          ['/create/github action.md','github action.md'],
+          ['/create/图片格式.md','图片格式.md'],
+        ],
+      },
+      {
+        title: 'theme',
+        children: [
+          ['theme.md','theme.md'],
+        ]
+      }
+    ]
+  }
+});
+```
+
+`.github/workflows/ci.yml`
+```yaml
+name: Build and Deploy
+on: 
+  push:
+    branches:
+      - main
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-22.04
+    steps:
+    
+    - name: Checkout
+      uses: actions/checkout@v2
+
+    - name: vuepress-deploy
+      uses: jenkey2011/vuepress-deploy@master
+      env:
+        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        TARGET_BRANCH: gh-pages
+        BUILD_SCRIPT: yarn install && yarn vuepress:build
+        BUILD_DIR: docs/.vuepress/dist/
+```
+
+`.gitignore`
+```
+docs/.vuepress/dist
+node_modules
+```
