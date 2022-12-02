@@ -7,29 +7,18 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        node-version: [10.x, 12.x, 14.x, 15.x]
+
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
 
-      - name: Run a multi-line script
-        run: |
-          pwd
-          echo $GITHUB_TOKEN
-          echo test the checkout action,
-          ls -a
-        env:
-          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-
-
-      # - name: Setup Node.js
-      #   uses: actions/setup-node@v1
-      #   with:
-      #     # 选择要使用的 node 版本
-      #     node-version: "16"
-
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
+      - name: Use Node.js ${{ matrix.node-version }}
+        uses: actions/setup-node@v3
         with:
-          node-version: '16.x'
+          node-version: ${{ matrix.node-version }}
+      - run: npm ci
       - run: yarn install
       - run: yarn vuepress:build
 
