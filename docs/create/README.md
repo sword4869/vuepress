@@ -1,6 +1,11 @@
-# 图片格式
+- [1. 图片格式](#1-图片格式)
+  - [1.1. A](#11-a)
+  - [1.2. B](#12-b)
 
-# A
+
+# 1. 图片格式
+
+## 1.1. A
 ```bash
 project
 ├── docs
@@ -25,7 +30,7 @@ project
 <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACsAAAAqCAIAAAClYzUyAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAJcEhZcwAADsMAAA7DAcdvqGQAAAE8SURBVFhHY/z8+TPDgAImKD1wYNQFoy4AgVEXjLoABEZdMGRd8PfrvQv3vv6F8igE5Ljg5famwvrChIyO3U+gIpQAcmNB0StM996s7NDCZZcoDAxyXcAma5c3a0FvovieWgoDg6KUyK3iVTF7VoXZS0oCgyIXgACzuHFqPyWBQbELwICSwKCOC0CA3MCgngvAABQYM/r9OY9PmbTtJVSMAKCyCxie7O7ILt/43TI9zV4cKkQAUM8Ff79eWlYYmj3rpUXFlBkVXircUHFCgEouAHo9I6F5v3hi74L+ZGNxZqgwMYBiF5DrdTigyAVf72wj2+twQK4Lfj0+PrcwoXg+0OuzyPI6HJDrgvvblp6Ael2QLK/DAVk9V2D74PJLcV0lbsrshoDRvvOoC0Bg1AWjLgCBUReMuoCBgYEBAF6thKeX41u2AAAAAElFTkSuQmCC" alt="图 1">
 ```
 
-## B
+## 1.2. B
 
 ```bash
 mkdir -p docs/.vuepress/public/vuepress-starter/images

@@ -18,6 +18,22 @@ export default defineConfig({
     // custom text for edit link. Defaults to "Edit this page"
     editLinkText: 'Help us improve this page!',
 
-    sidebar: 'auto'
-  },
+
+    sidebar: [
+      {
+        title: 'create',
+        children: [
+          '/create/deploy脚本.md',
+          '/create/github action.md',
+          '/create/空项目.md',
+        ],
+      },
+      {
+        title: 'theme',
+        children: [
+          'theme.md',
+        ]
+      }
+    ]
+  }
 });

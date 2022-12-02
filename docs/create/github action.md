@@ -1,4 +1,4 @@
-## Publishing with a custom GitHub Actions workflow
+# Publishing with a custom GitHub Actions workflow
 Publishing with a custom GitHub Actions workflow: 提交到主分支时就会自动更新
 
 ```bash

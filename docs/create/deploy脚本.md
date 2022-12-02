@@ -5,7 +5,7 @@
 
 手动提交到gh-pages
 
-## Publishing from a branch
+
 
 ![failure](../../images/83ad32c958dacc26e343fa0988ac1868f25889fb9f830f60f9946bf11d77dca4.png)
 
