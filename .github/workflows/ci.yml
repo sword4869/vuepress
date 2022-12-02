@@ -16,62 +16,40 @@ jobs:
           cache: 'yarn'
       - run: |
           yarn install
-          ls node_modules
-      - run: yarn vuepress:build
-
-      # # 缓存 node_modules
-      # - name: Cache dependencies
-      #   uses: actions/cache@v2
-      #   id: yarn-cache
-      #   with:
-      #     path: |
-      #       **/node_modules
-      #     key: ${{ runner.os }}-yarn-${{ hashFiles('**/yarn.lock') }}
-      #     restore-keys: |
-      #       ${{ runner.os }}-yarn-
-
-      # # 如果缓存没有命中，安装依赖
-      # - name: Install dependencies
-      #   if: steps.yarn-cache.outputs.cache-hit != 'true'
-      #   run: yarn --frozen-lockfile
-
-      # # 运行构建脚本
-      # - name: Build VuePress site
-      #   run: yarn vuepress:build
-
-      # # 查看 workflow 的文档来获取更多信息
-      # # @see https://github.com/crazy-max/ghaction-github-pages
-      # - name: Deploy to GitHub Pages
-      #   uses: crazy-max/ghaction-github-pages@v2
-      #   # 环境变量
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
-      #   with:
-      #     # 部署到 gh-pages 分支
-      #     target_branch: gh-pages
-      #     # 部署目录为 VuePress 的默认输出目录
-      #     build_dir: docs/.vuepress/dist
 
 
-
-
-      - name: Init new repo in dist folder and commit generated files
-        run: |
-          cd docs/.vuepress/dist
-          git init
-          git add -A
-          git config --local user.email "1084662708@qq.com"
-          git config --local user.name "sword4869"
-          git commit -m 'deploy'
-
-      - name: Force push to destination branch
-        uses: ad-m/github-push-action@v0.5.0
+      # 查看 workflow 的文档来获取更多信息
+      - name: Deploy to GitHub Pages
+        uses: crazy-max/ghaction-github-pages@v2
+        # 环境变量
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
-          github_token: ${{ secrets.GITHUB_TOKEN }}
-          # this might change depending on whether you are publishing a site for a normal repo or a user/organization repo
-          branch: gh-pages
-          force: true
-          directory: ./docs/.vuepress/dist
+          # 部署到 gh-pages 分支
+          target_branch: gh-pages
+          # 部署目录为 VuePress 的默认输出目录
+          build_dir: docs
+
+
+
+
+      # - name: Init new repo in dist folder and commit generated files
+      #   run: |
+      #     cd docs/.vuepress/dist
+      #     git init
+      #     git add -A
+      #     git config --local user.email "1084662708@qq.com"
+      #     git config --local user.name "sword4869"
+      #     git commit -m 'deploy'
+
+      # - name: Force push to destination branch
+      #   uses: ad-m/github-push-action@v0.5.0
+      #   with:
+      #     github_token: ${{ secrets.GITHUB_TOKEN }}
+      #     # this might change depending on whether you are publishing a site for a normal repo or a user/organization repo
+      #     branch: gh-pages
+      #     force: true
+      #     directory: ./docs/.vuepress/dist
 
 # jobs:
 #   build-and-deploy:
