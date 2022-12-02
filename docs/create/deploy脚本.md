@@ -1,4 +1,6 @@
-# 推送项目到GitPages
+# deploy脚本
+
+推送项目到GitPages
 
 如果懒的话, 不用vuepress, gitpages也可以直接显示md文档
 
