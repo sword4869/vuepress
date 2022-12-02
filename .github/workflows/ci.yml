@@ -10,10 +10,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       
-      - uses: actions/setup-node@v3
-        with:
-          node-version: '16.x'
-          cache: 'yarn'
+      # - uses: actions/setup-node@v3
+      #   with:
+      #     node-version: '16.x'
+      #     cache: 'yarn'
       # - run: yarn install
 
       - name: vuepress-deploy
