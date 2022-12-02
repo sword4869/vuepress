@@ -5,10 +5,6 @@ set -e
 
 yarn install 
 
-mkdir -p docs/.vuepress/public/images
-rm -r docs/.vuepress/public/images
-cp -r images/ docs/.vuepress/public/images
-
 # 生成静态文件
 yarn vuepress:build
 
