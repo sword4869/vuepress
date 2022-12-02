@@ -19,19 +19,25 @@ jobs:
 
 
       # 查看 workflow 的文档来获取更多信息
-      - name: Deploy to GitHub Pages
-        uses: crazy-max/ghaction-github-pages@v2
-        # 环境变量
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      # - name: Deploy to GitHub Pages
+      #   uses: crazy-max/ghaction-github-pages@v2
+      #   # 环境变量
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     # 部署到 gh-pages 分支
+      #     target_branch: gh-pages
+      #     # 部署目录为 VuePress 的默认输出目录
+      #     build_dir: docs
+
+
+      - name: Force push to destination branch
+        uses: ad-m/github-push-action@v0.5.0
         with:
-          # 部署到 gh-pages 分支
-          target_branch: gh-pages
-          # 部署目录为 VuePress 的默认输出目录
-          build_dir: docs
-
-
-
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          # this might change depending on whether you are publishing a site for a normal repo or a user/organization repo
+          branch: gh-pages
+          directory: docs/.vuepress
 
       # - name: Init new repo in dist folder and commit generated files
       #   run: |
@@ -42,14 +48,7 @@ jobs:
       #     git config --local user.name "sword4869"
       #     git commit -m 'deploy'
 
-      # - name: Force push to destination branch
-      #   uses: ad-m/github-push-action@v0.5.0
-      #   with:
-      #     github_token: ${{ secrets.GITHUB_TOKEN }}
-      #     # this might change depending on whether you are publishing a site for a normal repo or a user/organization repo
-      #     branch: gh-pages
-      #     force: true
-      #     directory: ./docs/.vuepress/dist
+
 
 # jobs:
 #   build-and-deploy:
