@@ -10,10 +10,8 @@ $ cd .github/workflows
 .github/workflows$ vim actions.yml
 ```
 
-如果是这个仓库推送自己，那么直接用action自动生成的`GITHUB_TOKEN`。
-```yml
-ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-```
+如果是这个仓库推送自己，那么直接用action自动生成的`secrets.GITHUB_TOKEN`。
+
 
 <details>
 <summary> 推送到其他仓库才用自定义token </summary>
@@ -22,7 +20,7 @@ ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
 在仓库Settings> Secrets> Actions> New repository secret> 命名变量`ACCESS_TOKEN`, 填上生成token的值
 
-在ci.yml中用`ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}`
+在ci.yml中用`secrets.ACCESS_TOKEN`
 </details>
 
 
