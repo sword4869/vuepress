@@ -1,6 +1,5 @@
 import os
 import sys
-import json
 
 path = os.getcwd()
 print(f'path={path}')
@@ -83,3 +82,12 @@ for name in a[0][1]:
         })
     else:
         result.append(name)
+
+def getDD(path):
+    root, dirs, files = a[0]
+    for dir in dirs:
+        result.append({
+            'title': name,
+            'children': []
+        })
+    result += files

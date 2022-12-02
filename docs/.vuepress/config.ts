@@ -20,6 +20,7 @@ export default defineConfig({
 
 
     sidebar: [
+      'ff',
       {
         title: 'create',
         children: [
