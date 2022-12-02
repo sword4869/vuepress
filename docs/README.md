@@ -1,3 +1,5 @@
+# REAME
+## bash
 ```bash
 yarn init
 yarn add -D vuepress
@@ -11,7 +13,20 @@ touch docs/.vuepress/config.ts
 touch .gitignore
 ```
 
-`docs/.vuepress/config.ts`
+```bash
+project
+├── docs
+│   ├── .vuepress
+│   │   └── config.ts
+│   ├── README.md 
+│   └── xxx文件夹 
+|       └── xxx.md
+├── node_modules
+├── package.json
+└── yarn.lock
+```
+
+## docs/.vuepress/config.ts
 ```ts
 import { defineConfig } from "vuepress/config";
 
@@ -45,8 +60,9 @@ export default defineConfig({
   }
 });
 ```
+改base，docsRepo，sidebar
 
-`.github/workflows/ci.yml`
+## .github/workflows/ci.yml
 ```yaml
 name: Build and Deploy
 on: 
@@ -64,13 +80,13 @@ jobs:
     - name: vuepress-deploy
       uses: jenkey2011/vuepress-deploy@master
       env:
-        ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+        ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         TARGET_BRANCH: gh-pages
         BUILD_SCRIPT: yarn install && yarn vuepress:build
         BUILD_DIR: docs/.vuepress/dist/
 ```
-
-`.gitignore`
+再去仓库设置中激活gitpages.
+## .gitignore
 ```
 docs/.vuepress/dist
 node_modules
