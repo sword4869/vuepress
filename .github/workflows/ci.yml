@@ -10,6 +10,16 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Run a multi-line script
+        run: |
+          pwd
+          ls $GITHUB_TOKEN
+          echo test the checkout action,
+          ls -a
+        env:
+          GITHUB_TOKEN: ${{ secrets.ACCESS_TOKEN }}
+
+
       # - name: Setup Node.js
       #   uses: actions/setup-node@v1
       #   with:
