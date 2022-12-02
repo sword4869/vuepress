@@ -32,8 +32,8 @@ themeConfig: {
         children: [
           '/create/deploy脚本.md',
           '/create/github action.md',
-          '/create/空项目.md',
           '/create/图片格式.md',
+          '/create/空项目.md',
         ],
       },
       {
