@@ -27,7 +27,7 @@ import sys
 
 
 
-def tree_dir(dir,layer, part_result):
+def tree_dir(dir, part_result):
     files = sorted(os.listdir(dir))
     file_lst=[]
     dir_lst=[]
@@ -44,7 +44,7 @@ def tree_dir(dir,layer, part_result):
     for subdir in dir_lst:
         subdir_path = os.path.join(dir, subdir)        
         part_result.append({"title": subdir, "children": []})
-        tree_dir(subdir_path,layer + 1, part_result[-1]['children'])
+        tree_dir(subdir_path, part_result[-1]['children'])
 
 
 
@@ -52,5 +52,5 @@ result = {
     'title': 'starter',
     'children':[]
 }
-tree_dir(sys.argv[1], 0, result['children'])
+tree_dir(sys.argv[1], result['children'])
 print(result)
