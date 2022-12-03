@@ -20,7 +20,6 @@ export default defineConfig({
 
     sidebar: {
       "/": [
-        ["README.md", "README.md"],
         ["theme.md", "theme.md"],
         {
           title: "create",

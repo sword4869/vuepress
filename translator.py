@@ -32,9 +32,16 @@ def tree_dir(dir, part_result, prefix=""):
     for file in files:
         file_path = os.path.join(dir, file)
         if os.path.isfile(file_path):
+            # docs/README.md 会报错，也不能显示
+            if prefix == '' and file == 'README.md':
+                continue
             file_lst.append(file)
         else:
+            # 我们不显示 docs/.vuepress文件夹
+            if file == '.vuepress':
+                continue
             dir_lst.append(file)
+
 
     for file in file_lst:
         part_result.append([prefix + file, file])
