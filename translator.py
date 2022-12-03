@@ -1,7 +1,7 @@
 import os
 import sys
 
-'''
+"""
 [
     {
         title: 'create',
@@ -22,15 +22,13 @@ import sys
     },
     ['theme.md','theme.md']
 ]
-'''
+"""
 
 
-
-
-def tree_dir(dir, part_result):
+def tree_dir(dir, part_result, prefix=""):
     files = sorted(os.listdir(dir))
-    file_lst=[]
-    dir_lst=[]
+    file_lst = []
+    dir_lst = []
     for file in files:
         file_path = os.path.join(dir, file)
         if os.path.isfile(file_path):
@@ -39,18 +37,14 @@ def tree_dir(dir, part_result):
             dir_lst.append(file)
 
     for file in file_lst:
-        part_result.append([file, file])
+        part_result.append([prefix + file, file])
 
     for subdir in dir_lst:
-        subdir_path = os.path.join(dir, subdir)        
+        subdir_path = os.path.join(dir, subdir)
         part_result.append({"title": subdir, "children": []})
-        tree_dir(subdir_path, part_result[-1]['children'])
+        tree_dir(subdir_path, part_result[-1]["children"], prefix + "/" + subdir + "/")
 
 
-
-result = {
-    'title': 'starter',
-    'children':[]
-}
-tree_dir(sys.argv[1], result['children'])
+result = {"title": "starter", "children": []}
+tree_dir(sys.argv[1], result["children"])
 print(result)

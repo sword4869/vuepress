@@ -18,18 +18,24 @@ export default defineConfig({
     // custom text for edit link. Defaults to "Edit this page"
     editLinkText: "Help us improve this page!",
 
-    sidebar: [
-      ["README.md", "README.md"],
-      ["theme.md", "theme.md"],
-      {
-        title: "create",
-        children: [
-          ["deploy脚本.md", "deploy脚本.md"],
-          ["github action.md", "github action.md"],
-          ["图片格式.md", "图片格式.md"],
-          ["空项目.md", "空项目.md"],
-        ],
-      },
-    ],
+    sidebar: {
+      "/": [
+        ["README.md", "README.md"],
+        ["theme.md", "theme.md"],
+        {
+          title: ".vuepress",
+          children: [["/.vuepress/config.ts", "config.ts"]],
+        },
+        {
+          title: "create",
+          children: [
+            ["/create/deploy脚本.md", "deploy脚本.md"],
+            ["/create/github action.md", "github action.md"],
+            ["/create/图片格式.md", "图片格式.md"],
+            ["/create/空项目.md", "空项目.md"],
+          ],
+        },
+      ],
+    },
   },
 });
