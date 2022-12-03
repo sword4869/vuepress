@@ -22,8 +22,8 @@ export default defineConfig({
     sidebar: {
       '/': [
         {
-          title: 'create',
-          children: [
+          'title': 'create',
+          'children': [
             ['/create/空项目.md', '空项目.md'],
             ['/create/deploy脚本.md', 'deploy脚本.md'],
             ['/create/github action.md', 'github action.md'],
