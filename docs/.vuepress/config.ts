@@ -20,7 +20,7 @@ export default defineConfig({
 
     sidebar: {
       "/": [
-        ["theme.md", "theme.md"],
+        ["/theme.md", "theme.md"],
         {
           title: "create",
           children: [
@@ -28,6 +28,7 @@ export default defineConfig({
             ["/create/github action.md", "github action.md"],
             ["/create/图片格式.md", "图片格式.md"],
             ["/create/空项目.md", "空项目.md"],
+            { title: "fake", children: [["/create/fake/test.md", "test.md"]] },
           ],
         },
       ],
