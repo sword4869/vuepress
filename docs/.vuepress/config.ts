@@ -23,10 +23,6 @@ export default defineConfig({
         ["README.md", "README.md"],
         ["theme.md", "theme.md"],
         {
-          title: ".vuepress",
-          children: [["/.vuepress/config.ts", "config.ts"]],
-        },
-        {
           title: "create",
           children: [
             ["/create/deploy脚本.md", "deploy脚本.md"],
