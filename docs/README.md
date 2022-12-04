@@ -25,6 +25,14 @@ project
 ├── package.json
 └── yarn.lock
 ```
+## package.json
+
+```js
+"scripts": {
+    "vuepress:dev": "vuepress dev docs",
+    "vuepress:build": "vuepress build docs"
+}
+```
 
 ## docs/.vuepress/config.ts
 ```ts
@@ -62,6 +70,7 @@ export default defineConfig({
 ```
 改base，docsRepo，sidebar
 
+sidebar用`translator.py`
 ## .github/workflows/ci.yml
 ```yaml
 name: Build and Deploy
