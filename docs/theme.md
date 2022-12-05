@@ -45,8 +45,20 @@ themeConfig: {
     ]
 }
 ```
+## 确认  
+- "vuepress-plugin-code-copy"
+  
+  代码块的复制
 
-## 阅读时长
+- "vuepress-plugin-helper-live2d"
+
+  看板娘
+
+- "vuepress-plugin-reading-progress"
+
+  在最上方以进度条的形式显示阅读进度
+
+## 阅读时长(失败)
 ```bash
 yarn add -D @mr-hope/vuepress-plugin-reading-time
 ```
