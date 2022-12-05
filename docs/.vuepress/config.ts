@@ -6,6 +6,11 @@ export default defineConfig({
    */
   title: "Hello VuePress",
   base: "/vuepress-starter/",
+  plugins: [
+      'vuepress-plugin-helper-live2d',
+      'vuepress-plugin-reading-progress',
+      'vuepress-plugin-code-copy',
+  ],
   themeConfig: {
     // if your docs are in a different repo from your main project:
     docsRepo: "sword4869/vuepress-starter",

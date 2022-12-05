@@ -45,3 +45,18 @@ themeConfig: {
     ]
 }
 ```
+
+## 阅读时长
+```bash
+yarn add -D @mr-hope/vuepress-plugin-reading-time
+```
+```ts
+plugins: [
+    [
+      "@mr-hope/reading-time",
+      {
+        // 配置选项
+      },
+    ],
+  ],
+```
