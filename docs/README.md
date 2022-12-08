@@ -95,6 +95,9 @@ jobs:
 再去仓库设置中激活gitpages.
 ## .gitignore
 ```
-docs/.vuepress/dist
+docs/.vuepress/*
+!docs/.vuepress/config.ts
 node_modules
+yarn.lock
+package-lock.json
 ```
