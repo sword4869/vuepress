@@ -26,23 +26,22 @@ themeConfig: {
 
 ```ts
 themeConfig: {
-    sidebar: [
+  sidebar: {
+    "/": [
+      ["/", "README"],
+      ["/theme.md", "theme.md"],
       {
-        title: 'create',
+        title: "create",
         children: [
-          ['/create/空项目.md','空项目.md'],
-          ['/create/deploy脚本.md','deploy脚本.md'],
-          ['/create/github action.md','github action.md'],
-          ['/create/图片格式.md','图片格式.md'],
+          ["/create/deploy脚本.md", "deploy脚本.md"],
+          ["/create/github action.md", "github action.md"],
+          ["/create/图片格式.md", "图片格式.md"],
+          ["/create/空项目.md", "空项目.md"],
+          { title: "fake", children: [["/create/fake/test.md", "test.md"]] },
         ],
       },
-      {
-        title: 'theme',
-        children: [
-          ['theme.md','theme.md'],
-        ]
-      }
-    ]
+    ],
+  },
 }
 ```
 ## 确认  

@@ -31,9 +31,6 @@ def tree_dir(dir, part_result, prefix=""):
     for file in files:
         file_path = os.path.join(dir, file)
         if os.path.isfile(file_path):
-            # README.md 会报错，也不能显示
-            if file.lower() == 'readme.md':
-                continue
             # 只允许显示md
             if file.endswith('.md') == False:
                 continue
@@ -46,7 +43,11 @@ def tree_dir(dir, part_result, prefix=""):
 
 
     for file in file_lst:
-        part_result.append([prefix + '/' + file, file])
+        # README.md 会报错，也不能显示
+        if file.lower() == 'readme.md':
+            part_result.append([prefix + '/', 'README'])
+        else:
+            part_result.append([prefix + '/' + file, file])
 
     for subdir in dir_lst:
         subdir_path = os.path.join(dir, subdir)
@@ -78,7 +79,7 @@ result = []
 
 
 tree_dir(path_dest, result)
-print(result)
+# print(result)
 
 tree_empty(result)
 print(result)

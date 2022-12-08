@@ -48,29 +48,28 @@ export default defineConfig({
     editLinks: true,
     editLinkText: 'Help us improve this page!',
 
-    sidebar: [
-      {
-        title: 'create',
-        children: [
-          ['/create/空项目.md','空项目.md'],
-          ['/create/deploy脚本.md','deploy脚本.md'],
-          ['/create/github action.md','github action.md'],
-          ['/create/图片格式.md','图片格式.md'],
-        ],
-      },
-      {
-        title: 'theme',
-        children: [
-          ['theme.md','theme.md'],
-        ]
-      }
-    ]
+    sidebar: {
+      "/": [
+        ["/", "README"],
+        ["/theme.md", "theme.md"],
+        {
+          title: "create",
+          children: [
+            ["/create/deploy脚本.md", "deploy脚本.md"],
+            ["/create/github action.md", "github action.md"],
+            ["/create/图片格式.md", "图片格式.md"],
+            ["/create/空项目.md", "空项目.md"],
+            { title: "fake", children: [["/create/fake/test.md", "test.md"]] },
+          ],
+        },
+      ],
+    },
   }
 });
 ```
 改base，docsRepo，sidebar
 
-sidebar用`translator.py`
+sidebar用[translator.py](../translator.py)
 ## .github/workflows/ci.yml
 ```yaml
 name: Build and Deploy

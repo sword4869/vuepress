@@ -7,9 +7,9 @@ export default defineConfig({
   title: "Hello VuePress",
   base: "/vuepress-starter/",
   plugins: [
-      'vuepress-plugin-helper-live2d',
-      'vuepress-plugin-reading-progress',
-      'vuepress-plugin-code-copy',
+    "vuepress-plugin-helper-live2d",
+    "vuepress-plugin-reading-progress",
+    "vuepress-plugin-code-copy",
   ],
   themeConfig: {
     // if your docs are in a different repo from your main project:
@@ -25,6 +25,7 @@ export default defineConfig({
 
     sidebar: {
       "/": [
+        ["/", "README"],
         ["/theme.md", "theme.md"],
         {
           title: "create",
