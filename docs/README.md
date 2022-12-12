@@ -36,7 +36,8 @@ project
 ```
 ## .github/workflows/ci.yml
 
-`docs/.vuepress/config.ts` 已经完全不用写了，我已经将其集成到action `sword4869/vuepress-deploy@main`中了。
+`docs/.vuepress/config.ts` 已经完全不用写了，我已经将其集成到action [sword4869/vuepress-deploy](https://github.com/sword4869/vuepress-deploy)中了。
+
 ```yaml
 name: Build and Deploy
 on: 
