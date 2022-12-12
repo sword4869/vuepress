@@ -83,6 +83,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
+
+      - run: python translator.py ${{ github.repository }}
       
       - name: vuepress-deploy
         uses: jenkey2011/vuepress-deploy@master

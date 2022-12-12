@@ -13,7 +13,7 @@ jobs:
       - run: python translator.py ${{ github.repository }}
       
       - name: vuepress-deploy
-        uses: jenkey2011/vuepress-deploy@master
+        uses: sword4869/vuepress-deploy@main
         env:
           ACCESS_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           TARGET_BRANCH: gh-pages
