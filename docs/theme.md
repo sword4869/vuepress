@@ -1,6 +1,9 @@
 
 # theme
 
+
+以下均不用自己写，我已经将其集成到action `sword4869/vuepress-deploy@main`中了。
+
 ## github edit
 ```ts
 themeConfig: {
@@ -23,7 +26,6 @@ themeConfig: {
 ![picture 2](../images/321b27a8bc06a3bfa3cff2c58e8c45e7ffc59c4881d5244fb13cf3d6382c161c.png)  
 
 ## sidebar
-
 ```ts
 themeConfig: {
   sidebar: {
