@@ -14,7 +14,7 @@ touch .gitignore
 ```bash
 project
 ├── docs
-│   ├── README.md 
+│   ├── README.md     // docs下一定要有个README.md, 这是进入网址的初始界面
 │   └── xxx文件夹 
 |       └── xxx.md
 ├── node_modules
