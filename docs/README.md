@@ -23,16 +23,16 @@ project
 ## package.json
 
 ```js
-"scripts": {
-    "vuepress:dev": "vuepress dev docs",
-    "vuepress:build": "vuepress build docs"
-},
-"devDependencies": {
-    "vuepress": "^1.9.7",
-    "vuepress-plugin-code-copy": "^1.0.6",
-    "vuepress-plugin-helper-live2d": "^1.0.2",
-    "vuepress-plugin-reading-progress": "^1.0.10"
-},
+    "scripts": {
+        "vuepress:dev": "vuepress dev docs",
+        "vuepress:build": "vuepress build docs"
+    },
+    "devDependencies": {
+        "vuepress": "^1.9.7",
+        "vuepress-plugin-code-copy": "^1.0.6",
+        "vuepress-plugin-helper-live2d": "^1.0.2",
+        "vuepress-plugin-reading-progress": "^1.0.10"
+    }
 ```
 ## .github/workflows/ci.yml
 
