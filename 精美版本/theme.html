@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>theme | Hello sword4869/vuepress-starter</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/vuepress-starter/assets/css/0.styles.26f40384.css" as="style"><link rel="preload" href="/vuepress-starter/assets/js/app.2fb28e9a.js" as="script"><link rel="preload" href="/vuepress-starter/assets/js/2.271c20f0.js" as="script"><link rel="preload" href="/vuepress-starter/assets/js/6.4ec04931.js" as="script"><link rel="prefetch" href="/vuepress-starter/assets/js/10.eb257057.js"><link rel="prefetch" href="/vuepress-starter/assets/js/11.565d899a.js"><link rel="prefetch" href="/vuepress-starter/assets/js/12.2a6a153e.js"><link rel="prefetch" href="/vuepress-starter/assets/js/13.b2eebade.js"><link rel="prefetch" href="/vuepress-starter/assets/js/14.c18d43f2.js"><link rel="prefetch" href="/vuepress-starter/assets/js/15.16cf2703.js"><link rel="prefetch" href="/vuepress-starter/assets/js/3.b396ac5a.js"><link rel="prefetch" href="/vuepress-starter/assets/js/4.86436c94.js"><link rel="prefetch" href="/vuepress-starter/assets/js/5.db50e0ec.js"><link rel="prefetch" href="/vuepress-starter/assets/js/7.0ddd1451.js"><link rel="prefetch" href="/vuepress-starter/assets/js/8.18f9237a.js"><link rel="prefetch" href="/vuepress-starter/assets/js/9.2fad91b6.js">
+    <link rel="stylesheet" href="/vuepress-starter/assets/css/0.styles.26f40384.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepress-starter/" class="home-link router-link-active"><!----> <span class="site-name">Hello sword4869/vuepress-starter</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/vuepress-starter/" aria-current="page" class="sidebar-link">README</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>简单版本</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>精美版本</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vuepress-starter/精美版本/theme.html" class="active sidebar-link">theme.md</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepress-starter/精美版本/theme.html#github-edit" class="sidebar-link">github edit</a></li><li class="sidebar-sub-header"><a href="/vuepress-starter/精美版本/theme.html#sidebar" class="sidebar-link">sidebar</a></li><li class="sidebar-sub-header"><a href="/vuepress-starter/精美版本/theme.html#确认" class="sidebar-link">确认</a></li><li class="sidebar-sub-header"><a href="/vuepress-starter/精美版本/theme.html#阅读时长-失败" class="sidebar-link">阅读时长(失败)</a></li></ul></li><li><a href="/vuepress-starter/精美版本/自定义的ci.html" class="sidebar-link">自定义的ci.md</a></li><li><a href="/vuepress-starter/精美版本/集成的ci.html" class="sidebar-link">集成的ci.md</a></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="theme"><a href="#theme" class="header-anchor">#</a> theme</h1> <p>以下均不用自己写，我已经将其集成到action <code>sword4869/vuepress-deploy@main</code>中了。</p> <h2 id="github-edit"><a href="#github-edit" class="header-anchor">#</a> github edit</h2> <div class="language-ts extra-class"><pre class="language-ts"><code>themeConfig<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token comment">// if your docs are in a different repo from your main project:</span>
+    docsRepo<span class="token operator">:</span> <span class="token string">&quot;sword4869/vuepress-starter&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// if your docs are in a specific branch (defaults to 'master'):</span>
+    docsBranch<span class="token operator">:</span> <span class="token string">&quot;main&quot;</span><span class="token punctuation">,</span>
+    <span class="token comment">// if your docs are not at the root of the repo:</span>
+    docsDir<span class="token operator">:</span> <span class="token string">'docs'</span><span class="token punctuation">,</span>
+    <span class="token comment">// defaults to false, set to true to enable</span>
+    editLinks<span class="token operator">:</span> <span class="token boolean">true</span><span class="token punctuation">,</span>
+    <span class="token comment">// custom text for edit link. Defaults to &quot;Edit this page&quot;</span>
+    editLinkText<span class="token operator">:</span> <span class="token string">'Help us improve this page!'</span>
+<span class="token punctuation">}</span>
+</code></pre></div><p>效果:</p> <p><img src="/vuepress-starter/assets/img/adae92a53549c0e6f4a9b5094e78c466f87c99bd57641f07e93317ab82274b9d.bb8ad48c.png" alt="picture 1"></p> <p><img src="/vuepress-starter/assets/img/321b27a8bc06a3bfa3cff2c58e8c45e7ffc59c4881d5244fb13cf3d6382c161c.09a47503.png" alt="picture 2"></p> <h2 id="sidebar"><a href="#sidebar" class="header-anchor">#</a> sidebar</h2> <div class="language-ts extra-class"><pre class="language-ts"><code>themeConfig<span class="token operator">:</span> <span class="token punctuation">{</span>
+  sidebar<span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;/&quot;</span><span class="token operator">:</span> <span class="token punctuation">[</span>
+      <span class="token punctuation">[</span><span class="token string">&quot;/&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;README&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">[</span><span class="token string">&quot;/theme.md&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;theme.md&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        title<span class="token operator">:</span> <span class="token string">&quot;create&quot;</span><span class="token punctuation">,</span>
+        children<span class="token operator">:</span> <span class="token punctuation">[</span>
+          <span class="token punctuation">[</span><span class="token string">&quot;/create/deploy脚本.md&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;deploy脚本.md&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token punctuation">[</span><span class="token string">&quot;/create/github action.md&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;github action.md&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token punctuation">[</span><span class="token string">&quot;/create/图片格式.md&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;图片格式.md&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token punctuation">[</span><span class="token string">&quot;/create/空项目.md&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;空项目.md&quot;</span><span class="token punctuation">]</span><span class="token punctuation">,</span>
+          <span class="token punctuation">{</span> title<span class="token operator">:</span> <span class="token string">&quot;fake&quot;</span><span class="token punctuation">,</span> children<span class="token operator">:</span> <span class="token punctuation">[</span><span class="token punctuation">[</span><span class="token string">&quot;/create/fake/test.md&quot;</span><span class="token punctuation">,</span> <span class="token string">&quot;test.md&quot;</span><span class="token punctuation">]</span><span class="token punctuation">]</span> <span class="token punctuation">}</span><span class="token punctuation">,</span>
+        <span class="token punctuation">]</span><span class="token punctuation">,</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="确认"><a href="#确认" class="header-anchor">#</a> 确认</h2> <ul><li><p>&quot;vuepress-plugin-code-copy&quot;</p> <p>代码块的复制</p></li> <li><p>&quot;vuepress-plugin-helper-live2d&quot;</p> <p>看板娘</p></li> <li><p>&quot;vuepress-plugin-reading-progress&quot;</p> <p>在最上方以进度条的形式显示阅读进度</p></li></ul> <h2 id="阅读时长-失败"><a href="#阅读时长-失败" class="header-anchor">#</a> 阅读时长(失败)</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">yarn</span> <span class="token function">add</span> <span class="token parameter variable">-D</span> @mr-hope/vuepress-plugin-reading-time
+</code></pre></div><div class="language-ts extra-class"><pre class="language-ts"><code>plugins<span class="token operator">:</span> <span class="token punctuation">[</span>
+    <span class="token punctuation">[</span>
+      <span class="token string">&quot;@mr-hope/reading-time&quot;</span><span class="token punctuation">,</span>
+      <span class="token punctuation">{</span>
+        <span class="token comment">// 配置选项</span>
+      <span class="token punctuation">}</span><span class="token punctuation">,</span>
+    <span class="token punctuation">]</span><span class="token punctuation">,</span>
+  <span class="token punctuation">]</span><span class="token punctuation">,</span>
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/sword4869/vuepress-starter/edit/main/docs/精美版本/theme.md" target="_blank" rel="noopener noreferrer">Help us improve this page!</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vuepress-starter/简单版本/fake/test.html" class="prev">
+        test.md
+      </a></span> <span class="next"><a href="/vuepress-starter/精美版本/自定义的ci.html">
+        自定义的ci.md
+      </a>
+      →
+    </span></p></div> </main></div><div class="global-ui"><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:65px;bottom:0px;width:135px;height:300px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="300" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:300px;"></canvas></div><!----></div></div>
+    <script src="/vuepress-starter/assets/js/app.2fb28e9a.js" defer></script><script src="/vuepress-starter/assets/js/2.271c20f0.js" defer></script><script src="/vuepress-starter/assets/js/6.4ec04931.js" defer></script>
+  </body>
+</html>

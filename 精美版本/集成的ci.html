@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>REAME | Hello sword4869/vuepress-starter</title>
+    <meta name="generator" content="VuePress 1.9.7">
+    
+    <meta name="description" content="">
+    
+    <link rel="preload" href="/vuepress-starter/assets/css/0.styles.26f40384.css" as="style"><link rel="preload" href="/vuepress-starter/assets/js/app.2fb28e9a.js" as="script"><link rel="preload" href="/vuepress-starter/assets/js/2.271c20f0.js" as="script"><link rel="preload" href="/vuepress-starter/assets/js/15.16cf2703.js" as="script"><link rel="prefetch" href="/vuepress-starter/assets/js/10.eb257057.js"><link rel="prefetch" href="/vuepress-starter/assets/js/11.565d899a.js"><link rel="prefetch" href="/vuepress-starter/assets/js/12.2a6a153e.js"><link rel="prefetch" href="/vuepress-starter/assets/js/13.b2eebade.js"><link rel="prefetch" href="/vuepress-starter/assets/js/14.c18d43f2.js"><link rel="prefetch" href="/vuepress-starter/assets/js/3.b396ac5a.js"><link rel="prefetch" href="/vuepress-starter/assets/js/4.86436c94.js"><link rel="prefetch" href="/vuepress-starter/assets/js/5.db50e0ec.js"><link rel="prefetch" href="/vuepress-starter/assets/js/6.4ec04931.js"><link rel="prefetch" href="/vuepress-starter/assets/js/7.0ddd1451.js"><link rel="prefetch" href="/vuepress-starter/assets/js/8.18f9237a.js"><link rel="prefetch" href="/vuepress-starter/assets/js/9.2fad91b6.js">
+    <link rel="stylesheet" href="/vuepress-starter/assets/css/0.styles.26f40384.css">
+  </head>
+  <body>
+    <div id="app" data-server-rendered="true"><div class="theme-container"><header class="navbar"><div class="sidebar-button"><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" role="img" viewBox="0 0 448 512" class="icon"><path fill="currentColor" d="M436 124H12c-6.627 0-12-5.373-12-12V80c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12zm0 160H12c-6.627 0-12-5.373-12-12v-32c0-6.627 5.373-12 12-12h424c6.627 0 12 5.373 12 12v32c0 6.627-5.373 12-12 12z"></path></svg></div> <a href="/vuepress-starter/" class="home-link router-link-active"><!----> <span class="site-name">Hello sword4869/vuepress-starter</span></a> <div class="links"><div class="search-box"><input aria-label="Search" autocomplete="off" spellcheck="false" value=""> <!----></div> <!----></div></header> <div class="sidebar-mask"></div> <aside class="sidebar"><!---->  <ul class="sidebar-links"><li><a href="/vuepress-starter/" aria-current="page" class="sidebar-link">README</a></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading"><span>简单版本</span> <span class="arrow right"></span></p> <!----></section></li><li><section class="sidebar-group collapsable depth-0"><p class="sidebar-heading open"><span>精美版本</span> <span class="arrow down"></span></p> <ul class="sidebar-links sidebar-group-items"><li><a href="/vuepress-starter/精美版本/theme.html" class="sidebar-link">theme.md</a></li><li><a href="/vuepress-starter/精美版本/自定义的ci.html" class="sidebar-link">自定义的ci.md</a></li><li><a href="/vuepress-starter/精美版本/集成的ci.html" class="active sidebar-link">集成的ci.md</a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a href="/vuepress-starter/精美版本/集成的ci.html#bash" class="sidebar-link">bash</a></li><li class="sidebar-sub-header"><a href="/vuepress-starter/精美版本/集成的ci.html#package-json" class="sidebar-link">package.json</a></li><li class="sidebar-sub-header"><a href="/vuepress-starter/精美版本/集成的ci.html#github-workflows-ci-yml" class="sidebar-link">.github/workflows/ci.yml</a></li><li class="sidebar-sub-header"><a href="/vuepress-starter/精美版本/集成的ci.html#gitignore" class="sidebar-link">.gitignore</a></li></ul></li></ul></section></li></ul> </aside> <main class="page"> <div class="theme-default-content content__default"><h1 id="reame"><a href="#reame" class="header-anchor">#</a> REAME</h1> <h2 id="bash"><a href="#bash" class="header-anchor">#</a> bash</h2> <div class="language-bash extra-class"><pre class="language-bash"><code><span class="token function">yarn</span> init
+<span class="token function">yarn</span> <span class="token function">add</span> <span class="token parameter variable">-D</span> vuepress
+
+<span class="token function">mkdir</span> docs
+<span class="token function">touch</span> docs/README.md
+
+<span class="token function">mkdir</span> <span class="token parameter variable">-p</span> .github/workflows
+<span class="token function">touch</span> .github/workflows/ci.yml
+
+<span class="token function">touch</span> .gitignore
+</code></pre></div><div class="language-bash extra-class"><pre class="language-bash"><code>project
+├── docs
+│   ├── README.md     // docs下一定要有个README.md, 这是进入网址的初始界面
+│   └── xxx文件夹 
+<span class="token operator">|</span>       └── xxx.md
+├── node_modules
+└── package.json
+</code></pre></div><h2 id="package-json"><a href="#package-json" class="header-anchor">#</a> package.json</h2> <div class="language-js extra-class"><pre class="language-js"><code><span class="token string-property property">&quot;scripts&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;vuepress:dev&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vuepress dev docs&quot;</span><span class="token punctuation">,</span>
+    <span class="token string-property property">&quot;vuepress:build&quot;</span><span class="token operator">:</span> <span class="token string">&quot;vuepress build docs&quot;</span>
+<span class="token punctuation">}</span><span class="token punctuation">,</span>
+<span class="token string-property property">&quot;devDependencies&quot;</span><span class="token operator">:</span> <span class="token punctuation">{</span>
+    <span class="token string-property property">&quot;vuepress&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.9.7&quot;</span><span class="token punctuation">,</span>
+    <span class="token string-property property">&quot;vuepress-plugin-code-copy&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.0.6&quot;</span><span class="token punctuation">,</span>
+    <span class="token string-property property">&quot;vuepress-plugin-helper-live2d&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.0.2&quot;</span><span class="token punctuation">,</span>
+    <span class="token string-property property">&quot;vuepress-plugin-reading-progress&quot;</span><span class="token operator">:</span> <span class="token string">&quot;^1.0.10&quot;</span>
+<span class="token punctuation">}</span>
+</code></pre></div><h2 id="github-workflows-ci-yml"><a href="#github-workflows-ci-yml" class="header-anchor">#</a> .github/workflows/ci.yml</h2> <p><code>docs/.vuepress/config.ts</code> 已经完全不用写了，我已经将其集成到action <a href="https://github.com/sword4869/vuepress-deploy" target="_blank" rel="noopener noreferrer">sword4869/vuepress-deploy<span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></a>中了。</p> <div class="language-yaml extra-class"><pre class="language-yaml"><code><span class="token key atrule">name</span><span class="token punctuation">:</span> Build and Deploy
+<span class="token key atrule">on</span><span class="token punctuation">:</span> 
+  <span class="token key atrule">push</span><span class="token punctuation">:</span>
+    <span class="token key atrule">branches</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> main
+
+<span class="token key atrule">jobs</span><span class="token punctuation">:</span>
+  <span class="token key atrule">build</span><span class="token punctuation">:</span>
+    <span class="token key atrule">runs-on</span><span class="token punctuation">:</span> ubuntu<span class="token punctuation">-</span>latest
+    <span class="token key atrule">steps</span><span class="token punctuation">:</span>
+      <span class="token punctuation">-</span> <span class="token key atrule">uses</span><span class="token punctuation">:</span> actions/checkout@v3
+      
+      <span class="token punctuation">-</span> <span class="token key atrule">name</span><span class="token punctuation">:</span> vuepress<span class="token punctuation">-</span>deploy
+        <span class="token key atrule">uses</span><span class="token punctuation">:</span> sword4869/vuepress<span class="token punctuation">-</span>deploy@main
+        <span class="token key atrule">env</span><span class="token punctuation">:</span>
+          <span class="token key atrule">ACCESS_TOKEN</span><span class="token punctuation">:</span> $<span class="token punctuation">{</span><span class="token punctuation">{</span> secrets.GITHUB_TOKEN <span class="token punctuation">}</span><span class="token punctuation">}</span>
+          <span class="token key atrule">TARGET_BRANCH</span><span class="token punctuation">:</span> gh<span class="token punctuation">-</span>pages
+          <span class="token key atrule">BUILD_SCRIPT</span><span class="token punctuation">:</span> python3 translator<span class="token punctuation">-</span>v1.py $<span class="token punctuation">{</span><span class="token punctuation">{</span>github.repository<span class="token punctuation">}</span><span class="token punctuation">}</span> <span class="token important">&amp;&amp;</span> yarn install <span class="token important">&amp;&amp;</span> yarn vuepress<span class="token punctuation">:</span>build
+          <span class="token key atrule">BUILD_DIR</span><span class="token punctuation">:</span> docs/.vuepress/dist/
+
+</code></pre></div><p>再去仓库设置中激活gitpages.</p> <h2 id="gitignore"><a href="#gitignore" class="header-anchor">#</a> .gitignore</h2> <div class="language- extra-class"><pre class="language-text"><code>docs/.vuepress/*
+!docs/.vuepress/config.ts
+node_modules
+yarn-error.log
+</code></pre></div></div> <footer class="page-edit"><div class="edit-link"><a href="https://github.com/sword4869/vuepress-starter/edit/main/docs/精美版本/集成的ci.md" target="_blank" rel="noopener noreferrer">Help us improve this page!</a> <span><svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg> <span class="sr-only">(opens new window)</span></span></div> <!----></footer> <div class="page-nav"><p class="inner"><span class="prev">
+      ←
+      <a href="/vuepress-starter/精美版本/自定义的ci.html" class="prev">
+        自定义的ci.md
+      </a></span> <!----></p></div> </main></div><div class="global-ui"><div id="live2d-widget" class="live2d-widget-container" style="position:fixed;right:65px;bottom:0px;width:135px;height:300px;z-index:99999;opacity:0.8;pointer-events:none;"><canvas id="live2d_canvas" width="135" height="300" class="live2d_canvas" style="position:absolute;left:0px;top:0px;width:135px;height:300px;"></canvas></div><!----></div></div>
+    <script src="/vuepress-starter/assets/js/app.2fb28e9a.js" defer></script><script src="/vuepress-starter/assets/js/2.271c20f0.js" defer></script><script src="/vuepress-starter/assets/js/15.16cf2703.js" defer></script>
+  </body>
+</html>
